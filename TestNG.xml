@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Homedepot">
+
+    <listeners>
+		<listener class-name = "com.homedepot.Utilities.Reporting" />
+	</listeners>
+	
+	<test name="HomeDepot Test">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.homedepot.TestCases.HomeScreenTest">
+				<methods>
+			        <include name ="giftcards_004"/>
+					<exclude name ="findastore_003"/>
+					<exclude name ="searchanitem_tc002"/>
+					<exclude name ="login_001"/>
+				</methods> 
+			</class>
+		</classes>
+    </test>
+    
+
+  <test name="Homedepo App Test Cases">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="com.home.qa.testdata.BlindspageTest"></class>
+      <class name="com.home.qa.testdata.CareerspageTest"></class>
+      <class name="com.home.qa.testdata.HomePageTest"></class>
+      <class name="com.home.qa.testdata.HuskypageTest"></class>
+     
+     
+    </classes>
+  </test> 
+</suite> 
